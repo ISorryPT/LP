@@ -1,0 +1,82 @@
+ion-header{
+  padding-top: 10px;
+  background-color: var(--ion-color-primary);;
+}
+
+ion-content{
+  --ion-background-color:var(--ion-color-primary-tint);
+}
+
+.menu{
+
+  background-color: var(--ion-color-primary-shade);
+
+  ion-segment-button{
+    font-size: 20px;
+    color: white;
+  }
+
+  .segment-button-checked{
+    background-color: var(--ion-color-primary-shade)!important;
+    border-bottom: 3px solid var(--ion-color-secondary)!important;
+  }
+}
+
+.menuContainer{
+  width: 100%;
+  padding: 20px 20px 20px 20px;
+   
+}
+
+.wod{
+  padding: 0px;
+  background: rgba(0, 0, 0, 0.192);
+  color: white;
+
+  h2{
+    margin:0px;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+  }
+
+  h3{
+    color: white;
+  }
+  ion-button{
+    color: white;
+  }
+}
+.numCards{
+  margin-top: 5px;
+  background: rgba(0, 0, 0, 0.192);
+  color: white;
+  
+ }
+
+.naipes{
+  margin-top: 5px!important;
+  background:rgba(0, 0, 0, 0.062);
+  padding: 10px;
+
+    ion-item{
+      --color: white;
+      background-color: transparent;
+      --ion-background-color:transparent!important;
+      padding: 5px 5px 0px 5px;
+      --border-color: white;
+    }
+
+    img{
+      padding: 3px;
+      width: 35px;
+      margin-right: 30px;
+    }
+}
+
+.buttonsToPlay{
+  ion-button{
+    --background: rgb(255, 0, 0)!important;
+    color: white;
+  }
+  
+}
