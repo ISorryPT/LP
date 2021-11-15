@@ -47,7 +47,7 @@ ion-content{
   }
 }
 .numCards{
-  margin-top: 5px;
+  margin-top: 15px;
   background: rgba(0, 0, 0, 0.192);
   color: white;
   
@@ -75,6 +75,7 @@ ion-content{
 
 .buttonsToPlay{
   ion-button{
+    margin-top: 15px;
     --background: rgb(255, 0, 0)!important;
     color: white;
   }

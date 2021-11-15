@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
 @Component({
@@ -6,14 +6,28 @@ import { ModalController } from '@ionic/angular';
   templateUrl: './select-wod-modal.component.html',
   styleUrls: ['./select-wod-modal.component.scss'],
 })
+
+
 export class SelectWodModalComponent implements OnInit {
+ 
+  // Data passed in by componentProps
+  @Input() data: Array<Object>;
 
-  constructor(private modalCtrl: ModalController) { }
+  selectedWood = 0;
 
-  ngOnInit() {}
+  constructor(private modalCtrl: ModalController) {}
+    
+
+  ngOnInit() {
+
+  }
 
   dismissModal(){
     this.modalCtrl.dismiss();
+  }
+
+  select(index: number){
+    this.modalCtrl.dismiss(index);
   }
 
 }

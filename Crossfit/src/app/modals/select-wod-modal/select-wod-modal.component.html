@@ -1,6 +1,31 @@
-<p>
-  select-wod-modal works!
-</p>
-<ion-button expand="block" fill="clear" shape="round" (click)="dismissModal()">
-  Fechar
-</ion-button>
+<header>
+  <ion-toolbar  mode="ios">
+
+  <ion-title>Select Wood</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button size="large" color="secondary" (click)="dismissModal()">
+        <ion-icon slot="icon-only" name="close-outline" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</header>
+
+
+<ion-content>
+  <ion-list   class="ion-no-padding" *ngFor="let item of data; let i = index">
+
+  <ion-grid class="ion-no-padding" class="ion-align-items-center" fixed>
+    <ion-row class="ion-no-padding" >
+      <ion-col size="3" >
+        <img src="../../../assets/icon/iconWhite.png" width="60px" alt="">
+  
+      </ion-col>
+      <ion-col class="ion-no-padding" size="9">
+        <ion-button (click)="select(i)" class="ion-no-margin" expand="full" fill="clear">{{item.name}}</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    
+  </ion-list>
+</ion-content>
