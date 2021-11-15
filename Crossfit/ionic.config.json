@@ -1,0 +1,7 @@
+{
+  "name": "Crossfit",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
