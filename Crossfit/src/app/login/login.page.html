@@ -12,18 +12,34 @@
   <div class="header">
     <img src="../../assets/icon/iconWhite.png" alt="">
   </div>
-  <form id="#form">
-    <ion-item class="imputBtn">
-      <ion-input type="email" placeholder="email adrress"></ion-input>
+  <form id="#form" class="form">
+    
+    <ion-item  class="inputIem" lines="none" >
+      <ion-label class="labelForm" position="stacked">Email</ion-label>
+      <ion-input class="inputForm" type="email" placeholder="example@email.com"></ion-input>
     </ion-item>
-    <ion-item class="imputBtn">
+
+    <ion-item  class="inputIem" lines="none" >
+      <ion-label class="labelForm" position="stacked">Password</ion-label>
+      <ion-input class="inputForm" type="password" ></ion-input>
+    </ion-item>
+    <!--
+      <ion-item class="imputBtn">
       <ion-input type="password" placeholder=""></ion-input>
     </ion-item>
-    <ion-buttons slot="start">
-      <ion-button>
-        <ion-icon slot="start" name="add"></ion-icon>
-        Click me
-      </ion-button>
-    </ion-buttons>
+    -->
+    <div class="div_buttons">
+      <div class="div_button" >
+        <ion-button class="button_register">Register</ion-button>
+      </div>
+      <div class="div_button">
+        <ion-button class="button_login">Login</ion-button>
+      </div>
+    </div>
+
+    <div>
+      
+    </div>
+    
   </form>
 </ion-content>
