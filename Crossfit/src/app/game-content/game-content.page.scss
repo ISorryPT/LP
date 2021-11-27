@@ -1,0 +1,19 @@
+ion-header{
+    padding-top: 10px;
+    background-color: var(--ion-color-primary);;
+}
+
+ion-content{
+    --ion-background-color:var(--ion-color-primary-tint);
+
+    .timer{
+        background: red;
+        padding: 5px;
+
+        ion-icon{
+            height: 40px;
+            width: 40px;
+        }
+    }
+}
+  

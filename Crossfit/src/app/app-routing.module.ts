@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'game-content',
     pathMatch: 'full'
   },
   {
@@ -23,6 +23,11 @@ const routes: Routes = [
     path: 'recover',
     loadChildren: () => import('./recover/recover.module').then( m => m.RecoverPageModule)
   },
+  {
+    path: 'game-content',
+    loadChildren: () => import('./game-content/game-content.module').then( m => m.GameContentPageModule)
+  },
+
 
 ];
 
