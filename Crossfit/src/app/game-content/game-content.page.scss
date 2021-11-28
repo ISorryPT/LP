@@ -7,12 +7,37 @@ ion-content{
     --ion-background-color:var(--ion-color-primary-tint);
 
     .timer{
+        width: 100%;
         background: red;
-        padding: 5px;
 
         ion-icon{
             height: 40px;
             width: 40px;
+        }
+
+        h1{
+            margin: 0px;
+        }
+    }
+
+    .exercise{
+        width: 100%;
+        text-align: center;
+
+        h1{
+            color: white;
+        }
+    }
+    .deck{
+        margin: auto;
+        width: 100%;
+        border: 3px solid green;
+
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
         }
     }
 }
