@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'game-content',
+    redirectTo: 'end-game',
     pathMatch: 'full'
   },
   {
@@ -27,6 +27,11 @@ const routes: Routes = [
     path: 'game-content',
     loadChildren: () => import('./game-content/game-content.module').then( m => m.GameContentPageModule)
   },
+  {
+    path: 'end-game',
+    loadChildren: () => import('./end-game/end-game.module').then( m => m.EndGamePageModule)
+  },
+
 
 
 ];
