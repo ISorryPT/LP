@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { SelectWodModalComponent } from '../modals/select-wod-modal/select-wod-modal.component';
+import { SwiperComponent, SwiperModule } from 'swiper/angular';
+import { SwiperOptions } from 'swiper';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +10,14 @@ import { SelectWodModalComponent } from '../modals/select-wod-modal/select-wod-m
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  @ViewChild('swiper') swiper: SwiperComponent;
+
+  config: SwiperOptions = {
+
+  }
+
+  selectedMenu = "wod";
+  
 
   selectedWood = 0;
   wods = [
@@ -34,6 +44,27 @@ export class HomePage {
     let {data: index} =await modalSelectWood.onWillDismiss()
     if(index){
       this.selectedWood = index;
+    }
+  }
+
+
+  sliderChange(e){
+    console.log(e.activeIndex);
+    }
+    
+  slideTo(index){
+    console.log("Slide to ", index)
+    switch (this.selectedMenu) {
+      case "wod":
+        this.swiper.swiperRef.slideTo(0);
+        this.selectedMenu = "wod";
+        break;
+      case "history":
+        this.swiper.swiperRef.slideTo(1);
+        this.selectedMenu = "history";
+        break;
+      default:
+        break;
     }
   }
 }
