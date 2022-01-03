@@ -18,4 +18,7 @@ import { SelectWodModalComponent } from '../modals/select-wod-modal/select-wod-m
   declarations: [HomePage, SelectWodModalComponent],
   entryComponents: [SelectWodModalComponent]
 })
-export class HomePageModule {}
+export class HomePageModule {
+
+  
+}
