@@ -1,9 +1,51 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>register</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button  text="" icon="arrow-back-outline" style="color: white; margin-left: 10px; margin-top: 3px;"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="header">
+    <img src="../../assets/icon/iconWhite.png" alt="">
+  </div>
+  <form id="#form" class="form">
+    
+    <ion-item  class="inputIem" lines="none" >
+      <ion-label class="labelForm" position="stacked">Nome</ion-label>
+      <ion-input class="inputForm" type="text"  style="color: white;"></ion-input>
+    </ion-item>
 
+    <ion-item  class="inputIem" lines="none" >
+      <ion-label class="labelForm" position="stacked">Telemovel</ion-label>
+      <ion-input class="inputForm" type="text"  style="color: white;"></ion-input>
+    </ion-item>
+
+    <ion-item  class="inputIem" lines="none" >
+      <ion-label class="labelForm" position="stacked">Email</ion-label>
+      <ion-input class="inputForm" type="email"  style="color: white;"></ion-input>
+    </ion-item>
+
+    <ion-item  class="inputIem" lines="none" >
+      <ion-label class="labelForm" position="stacked">Password</ion-label>
+      <ion-input class="inputForm" type="password" style="color: white;"></ion-input>
+    </ion-item>
+    <!--
+      <ion-item class="imputBtn">
+      <ion-input type="password" placeholder=""></ion-input>
+    </ion-item>
+    -->
+
+    <div class="div_buttons">
+      <div class="div_button2">
+        <ion-button class="button_guest">Register</ion-button>
+      </div>
+    </div>
+
+    <div style="margin-top: 35px;">
+      <p style="text-align: center; color: white;">Forgot password? Click <a style="text-decoration: none; color: red;" [routerLink]="['/forgotpass']">here</a> !</p>
+    </div>
+    
+  </form>
 </ion-content>

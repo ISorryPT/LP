@@ -20,6 +20,10 @@ const routes: Routes = [
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
   {
+    path: 'forgotpass',
+    loadChildren: () => import('./forgot-pass/forgot-pass.module').then( m => m.ForgotPassModule)
+  },
+  {
     path: 'recover',
     loadChildren: () => import('./recover/recover.module').then( m => m.RecoverPageModule)
   },
