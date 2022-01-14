@@ -1,15 +1,18 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { SelectWodModalComponent } from '../modals/select-wod-modal/select-wod-modal.component';
 import { SwiperComponent, SwiperModule } from 'swiper/angular';
 import { SwiperOptions } from 'swiper';
+import { APIService } from '../services/api.service';
+
+
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit{
   @ViewChild('swiper') swiper: SwiperComponent;
 
   config: SwiperOptions = {
@@ -17,8 +20,6 @@ export class HomePage {
   }
 
   selectedMenu = "wod";
-  
-
   selectedWood = 0;
   wods = [
     {id:1,name:"Pernas",numCards:35,copas:"Push Press",paus:"Ring Cenas",ouros:"Muita Brita",espadas:"Salto Corda"},
@@ -28,7 +29,14 @@ export class HomePage {
     {id:5,name:"Cardio",numCards:14,copas:"Push Press",paus:"Ring Cenas",ouros:"Muita Brita",espadas:"Salto Corda"}
   ]
 
-  constructor(private modalCtrl: ModalController) {}
+  constructor(private modalCtrl: ModalController, private API: APIService) {}
+
+  ngOnInit(): void {
+    this.API.getWods()
+    .subscribe((res)=>{
+      this.wods = res;
+    })
+  }
 
   async openWodModal(){
     const modalSelectWood = await this.modalCtrl.create({
@@ -46,7 +54,6 @@ export class HomePage {
       this.selectedWood = index;
     }
   }
-
 
   sliderChange(e){
     console.log(e.activeIndex);
@@ -67,4 +74,6 @@ export class HomePage {
         break;
     }
   }
+
+  
 }
