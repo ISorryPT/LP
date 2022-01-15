@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { History } from '../../models/history';
+import { APIService } from '../../services/api.service';
 
 @Component({
   selector: 'app-end-game-statics',
@@ -7,8 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EndGameStaticsComponent implements OnInit {
 
-  constructor() { }
+  history : History[] = [{id:1,img:"",tipoTreino:"",duracao:{hours:1,minutes:30}}];
 
-  ngOnInit() {}
+  constructor(private API: APIService) { }
+
+  ngOnInit() {
+    this.API.getWods()
+    .subscribe((res)=>{
+      this.history = res['data']
+    })
+  }
 
 }

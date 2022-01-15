@@ -107,65 +107,9 @@
       <div class="history">
         <ion-list mode="md">
 
-          <ion-item [routerLink]="['/end-game']">
+          <ion-item *ngFor="let item of history" [routerLink]="['/end-game']">
             <ion-img src="../../assets/icon/iconWhite.png"></ion-img>
-            <ion-badge slot="end" color="primary" mode="ios">Treino Pernas > 00:04:40</ion-badge>
-          </ion-item>
-          <ion-item>
-            <ion-img src="../../assets/icon/iconWhite.png"></ion-img>
-            <ion-badge slot="end" color="primary" mode="ios">Treino Pernas > 00:04:40</ion-badge>
-          </ion-item>
-          <ion-item>
-            <ion-img src="../../assets/icon/iconWhite.png"></ion-img>
-            <ion-badge slot="end" color="primary" mode="ios">Treino Pernas > 00:04:40</ion-badge>
-          </ion-item>
-          <ion-item>
-            <ion-img src="../../assets/icon/iconWhite.png"></ion-img>
-            <ion-badge slot="end" color="primary" mode="ios">Treino Pernas > 00:04:40</ion-badge>
-          </ion-item>
-          <ion-item>
-            <ion-img src="../../assets/icon/iconWhite.png"></ion-img>
-            <ion-badge slot="end" color="primary" mode="ios">Treino Pernas > 00:04:40</ion-badge>
-          </ion-item>
-          <ion-item>
-            <ion-img src="../../assets/icon/iconWhite.png"></ion-img>
-            <ion-badge slot="end" color="primary" mode="ios">Treino Pernas > 00:04:40</ion-badge>
-          </ion-item>
-          <ion-item>
-            <ion-img src="../../assets/icon/iconWhite.png"></ion-img>
-            <ion-badge slot="end" color="primary" mode="ios">Treino Pernas > 00:04:40</ion-badge>
-          </ion-item>
-          <ion-item>
-            <ion-img src="../../assets/icon/iconWhite.png"></ion-img>
-            <ion-badge slot="end" color="primary" mode="ios">Treino Pernas > 00:04:40</ion-badge>
-          </ion-item>
-          <ion-item>
-            <ion-img src="../../assets/icon/iconWhite.png"></ion-img>
-            <ion-badge slot="end" color="primary" mode="ios">Treino Pernas > 00:04:40</ion-badge>
-          </ion-item>
-          <ion-item>
-            <ion-img src="../../assets/icon/iconWhite.png"></ion-img>
-            <ion-badge slot="end" color="primary" mode="ios">Treino Pernas > 00:04:40</ion-badge>
-          </ion-item>
-          <ion-item>
-            <ion-img src="../../assets/icon/iconWhite.png"></ion-img>
-            <ion-badge slot="end" color="primary" mode="ios">Treino Pernas > 00:04:40</ion-badge>
-          </ion-item>
-          <ion-item>
-            <ion-img src="../../assets/icon/iconWhite.png"></ion-img>
-            <ion-badge slot="end" color="primary" mode="ios">Treino Pernas > 00:04:40</ion-badge>
-          </ion-item>
-          <ion-item>
-            <ion-img src="../../assets/icon/iconWhite.png"></ion-img>
-            <ion-badge slot="end" color="primary" mode="ios">Treino Pernas > 00:04:40</ion-badge>
-          </ion-item>
-          <ion-item>
-            <ion-img src="../../assets/icon/iconWhite.png"></ion-img>
-            <ion-badge slot="end" color="primary" mode="ios">Treino Pernas > 00:04:40</ion-badge>
-          </ion-item>
-          <ion-item>
-            <ion-img src="../../assets/icon/iconWhite.png"></ion-img>
-            <ion-badge slot="end" color="primary" mode="ios">Treino Pernas > 00:04:40</ion-badge>
+            <ion-badge slot="end" color="primary" mode="ios">{{item.tipoTreino}} > 01:30</ion-badge>
           </ion-item>
         </ion-list>
 
