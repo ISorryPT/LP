@@ -9,13 +9,16 @@ import { GameContentPageRoutingModule } from './game-content-routing.module';
 import { GameContentPage } from './game-content.page';
 import { ComponentModule } from '../shared/components.module';
 
+import { SwiperModule } from "swiper/angular";
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     ComponentModule,
     IonicModule,
-    GameContentPageRoutingModule
+    GameContentPageRoutingModule,
+    SwiperModule
   ],
   declarations: [GameContentPage]
 })

@@ -55,10 +55,17 @@
 
   <!--<div class="deck">
     <img src="../../assets/card/ACopas.jpg" alt="">
-  </div>-->
+  </div>
 
-  <app-card></app-card>
-
+  <app-card></app-card>-->
+  <swiper #swiper 
+    [effect]="'cards'" 
+    class="mySwiper"
+  >
+    <ng-template swiperSlide *ngFor="let item of gameToPlay.cards">
+      <img src="../../assets/card/ACopas.jpg" alt="">
+    </ng-template>
+  </swiper>
   
   <div class="timer2">
 
@@ -86,7 +93,7 @@
           </ion-button>
         </ion-col>
         <ion-col size="6">
-          <ion-button mode="ios" expand="full" fill="solid">
+          <ion-button (click)="slideTo()" mode="ios" expand="full" fill="solid">
             <ion-icon name="chevron-forward-outline"></ion-icon>
           </ion-button>
         </ion-col>

@@ -1,0 +1,17 @@
+
+{
+    "wodName":" XPTO",
+    "cards": [
+      {"id":1,"img":"/img.jpg","reps":10,"exercise":"Pull UP"},
+      {"id":2,"img":"/img.jpg","reps":20,"exercise":"Pull UP"},
+      {"id":3,"img":"/img.jpg","reps":30,"exercise":"Pull UP"},
+      {"id":4,"img":"/img.jpg","reps":40,"exercise":"Pull UP"},
+      {"id":5,"img":"/img.jpg","reps":50,"exercise":"Pull UP"},
+      {"id":6,"img":"/img.jpg","reps":60,"exercise":"Pull UP"},
+      {"id":7,"img":"/img.jpg","reps":70,"exercise":"Pull UP"},
+      {"id":8,"img":"/img.jpg","reps":80,"exercise":"Pull UP"},
+      {"id":9,"img":"/img.jpg","reps":90,"exercise":"Pull UP"},
+      {"id":10,"img":"/img.jpg","reps":100,"exercise":"Pull UP"},
+      {"id":11,"img":"/img.jpg","reps":110,"exercise":"Pull UP"}
+  ]    
+}

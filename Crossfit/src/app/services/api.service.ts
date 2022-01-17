@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http'
 import { Wod } from '../models/wod';
 import { History } from '../models/history';
 import { FullHistory } from '../models/fullHistory';
+import { Game } from '../models/game';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +24,9 @@ export class APIService {
 
   getFullHistory(){
     return this.http.get<FullHistory>('/assets/history.json')
+  }
+
+  getGame(){
+    return this.http.get<Game>('/assets/game.json')
   }
 }
