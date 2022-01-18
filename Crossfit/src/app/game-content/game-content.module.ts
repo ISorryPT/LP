@@ -10,6 +10,7 @@ import { GameContentPage } from './game-content.page';
 import { ComponentModule } from '../shared/components.module';
 
 import { SwiperModule } from "swiper/angular";
+import { NgxChronometerModule } from 'ngx-chronometer';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { SwiperModule } from "swiper/angular";
     ComponentModule,
     IonicModule,
     GameContentPageRoutingModule,
-    SwiperModule
+    SwiperModule,
+    NgxChronometerModule
   ],
   declarations: [GameContentPage]
 })

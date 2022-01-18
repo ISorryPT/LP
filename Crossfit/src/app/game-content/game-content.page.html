@@ -20,7 +20,7 @@
   <div class="wodName ion-text-center">
 
     <ion-text>
-      <h4 class="ion-no-margin">WOD XPTO</h4>
+      <h4 class="ion-no-margin">{{"WOD " + gameToPlay.wodName}}</h4>
     </ion-text>
     
   </div>
@@ -34,12 +34,12 @@
         </ion-col>
         <ion-col size="8">
           <ion-text color="primary">
-            <h4>00:50:23</h4>
+            <h4 [chronometer]="gameTimer">00:50:23</h4>
           </ion-text>
         </ion-col>
         <ion-col size="3">
           <ion-text color="primary">
-            <h4>10/30</h4>
+            <h4>{{actualCard + "/" + (gameToPlay.cards.length - 5) }}</h4>
           </ion-text>
         </ion-col>
       </ion-row>
@@ -49,7 +49,7 @@
 
   <div class="exercise">
     <ion-text color="primary">
-      <h1>10X Pullups</h1>
+      <h1>{{gameToPlay.cards[actualCard].exercise}}</h1>
     </ion-text>
   </div>
 
@@ -63,7 +63,7 @@
     class="mySwiper"
   >
     <ng-template swiperSlide *ngFor="let item of gameToPlay.cards">
-      <img src="../../assets/card/ACopas.jpg" alt="">
+      <img [src]="item.img" alt="">
     </ng-template>
   </swiper>
   
@@ -76,7 +76,7 @@
         </ion-col>
         <ion-col size="7" class="ion-align-self-end">
           <ion-text color="primary">
-            <h4>50:23</h4>
+            <h4 [chronometer]="cardTimer">50:23</h4>
           </ion-text>
         </ion-col>
       </ion-row>
@@ -88,12 +88,12 @@
     <ion-grid fixed class="ion-no-padding" class="ion-align-items-center">
       <ion-row>
         <ion-col size="6" >
-          <ion-button mode="ios" expand="full" fill="solid">
+          <ion-button (click)="pause()" mode="ios" expand="full" fill="solid">
             <ion-icon name="pause-outline"></ion-icon>
           </ion-button>
         </ion-col>
         <ion-col size="6">
-          <ion-button (click)="slideTo()" mode="ios" expand="full" fill="solid">
+          <ion-button (click)="next()" mode="ios" expand="full" fill="solid">
             <ion-icon name="chevron-forward-outline"></ion-icon>
           </ion-button>
         </ion-col>
