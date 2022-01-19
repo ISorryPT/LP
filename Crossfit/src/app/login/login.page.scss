@@ -1,9 +1,9 @@
 ion-toolbar{
-    --background: #1d1c1c;
+    --background: #3c3c3c;
 }
 
 ion-content{
-    --background: #1d1c1c;
+    --background: #3c3c3c;
 }
 
 
@@ -26,19 +26,22 @@ ion-content{
 }
 
 
+
 .inputForm{
     border-radius: 10px;
-    border: 3px solid #e6e6e6;
+    border: 2px solid #ffffff;
     font-size: 22px;
     display: block;
     margin-top: 7px;
     --padding-start: 9px;
-    box-shadow: 3px 3px 3px 2px rgb(230, 230, 230, 0.2);
     margin-bottom: 8px;
+    color: white;
+    --placeholder-color: rgb(255, 255, 255);
 }
 
+
 .md .labelForm{
-    color: #b30000;
+    color: #ff0000;
     display: block;
     font-weight: bold;
     margin-bottom: 15px;
@@ -47,11 +50,11 @@ ion-content{
 }
 
 .ios .labelForm{
-    color: #b30000;
+    color: #ff0000;
     display: block;
     margin-left: 3px;
     font-weight: bold;
-    font-size: 19px;
+    font-size: 20px;
 }
 
 .inputIem{
@@ -90,7 +93,6 @@ ion-content{
     height: 45px;
     font-weight: bold;
     border-radius: 10px;
-    box-shadow: 4px 4px 3px rgb(230, 230, 230, 0.2);
 }
 
 .button_login{
@@ -99,7 +101,7 @@ ion-content{
     height: 45px;
     font-weight: bold;
     border-radius: 10px;
-    box-shadow: 4px 4px 3px rgb(230, 230, 230, 0.2);
+    //box-shadow: 4px 4px 3px rgb(230, 230, 230, 0.2);
 }
 
 .button_guest{
@@ -108,6 +110,6 @@ ion-content{
     height: 45px;
     font-weight: bold;
     border-radius: 10px;
-    box-shadow: 4px 4px 3px rgb(230, 230, 230, 0.2);
+    //box-shadow: 4px 4px 3px rgb(230, 230, 230, 0.2);
 }
 
