@@ -1,0 +1,15 @@
+
+{
+    "data": [
+      {"id":1,"img":"/img.jpg","tipoTreino":"Treino Six Pack","duracao":"01:30h"}, 
+      {"id":2,"img":"/img.jpg","tipoTreino":"Treino Pernas","duracao":"01:30h"},
+      {"id":3,"img":"/img.jpg","tipoTreino":"Treino Pernas","duracao":"01:30h"},
+      {"id":4,"img":"/img.jpg","tipoTreino":"Treino Pernas","duracao":"01:30h"},
+      {"id":5,"img":"/img.jpg","tipoTreino":"Treino Costas","duracao":"01:30h"},
+      {"id":6,"img":"/img.jpg","tipoTreino":"Treino Pernas","duracao":"01:30h"},
+      {"id":7,"img":"/img.jpg","tipoTreino":"Treino Pernas","duracao":"01:30h"},
+      {"id":8,"img":"/img.jpg","tipoTreino":"Treino Pernas","duracao":"01:30h"},
+      {"id":9,"img":"/img.jpg","tipoTreino":"Treino Pernas","duracao":"01:30h"},
+      {"id":10,"img":"/img.jpg","tipoTreino":"Treino Pernas","duracao":"01:30h"}
+    ] 
+}

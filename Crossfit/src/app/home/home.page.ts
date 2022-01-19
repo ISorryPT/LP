@@ -1,24 +1,44 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { SelectWodModalComponent } from '../modals/select-wod-modal/select-wod-modal.component';
+import { SwiperComponent, SwiperModule } from 'swiper/angular';
+import { SwiperOptions } from 'swiper';
+import { APIService } from '../services/api.service';
+import { Wod } from '../models/wod';
+import { History } from '../models/history';
+
+
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit{
+  @ViewChild('swiper') swiper: SwiperComponent;
 
+  config: SwiperOptions = {
+
+  }
+
+  selectedMenu = "wod";
   selectedWood = 0;
-  wods = [
-    {id:1,name:"Pernas",numCards:35,copas:"Push Press",paus:"Ring Cenas",ouros:"Muita Brita",espadas:"Salto Corda"},
-    {id:2,name:"Braços",numCards:40,copas:"Bissep",paus:"Ring Cenas",ouros:"Muita Brita",espadas:"Salto Corda"},
-    {id:3,name:"Funcional",numCards:20,copas:"Strong",paus:"Ring Cenas",ouros:"Muita Brita",espadas:"Salto Corda"},
-    {id:4,name:"Peso",numCards:100,copas:"Squats",paus:"Ring Cenas",ouros:"Muita Brita",espadas:"Salto Corda"},
-    {id:5,name:"Cardio",numCards:14,copas:"Push Press",paus:"Ring Cenas",ouros:"Muita Brita",espadas:"Salto Corda"}
-  ]
+  wods : Wod[] = [{"id":0,"name":"","numCards":0,"copas":"","paus":"","ouros":"","espadas":""}];
+  history : History[];
 
-  constructor(private modalCtrl: ModalController) {}
+  constructor(private modalCtrl: ModalController, private API: APIService) {}
+
+  ngOnInit(): void {
+    this.API.getWods()
+    .subscribe((res)=>{
+      this.wods = res['data']
+    })
+
+    this.API.getHistory()
+    .subscribe((res)=>{
+      this.history = res['data']
+    })
+  }
 
   async openWodModal(){
     const modalSelectWood = await this.modalCtrl.create({
@@ -36,4 +56,27 @@ export class HomePage {
       this.selectedWood = index;
     }
   }
+
+  sliderChange(e){
+    console.log(e.activeIndex);
+    
+    }
+    
+  slideTo(index){
+    console.log("Slide to ", index)
+    switch (this.selectedMenu) {
+      case "wod":
+        this.selectedMenu = "wod";
+        this.swiper.swiperRef.slideTo(0);
+        break;
+      case "history":
+        this.selectedMenu = "history";
+        this.swiper.swiperRef.slideTo(1);
+        break;
+      default:
+        break;
+    }
+  }
+
+  
 }

@@ -1,0 +1,14 @@
+
+{
+    "data": [
+    {"id":1,"img":"/img.jpg","tipoTreino":"Treino Pernas","data":"2022-01-05"},
+    {"id":2,"img":"/img.jpg","tipoTreino":"Treino Costas","data":"2021-10-10"},
+    {"id":3,"img":"/img.jpg","tipoTreino":"Treino Brços","data":"2022-01-05"},
+    {"id":4,"img":"/img.jpg","tipoTreino":"Treino Six Pack","data":"2022-01-05"},
+    {"id":5,"img":"/img.jpg","tipoTreino":"Treino Costas","data":"2022-01-05"},
+    {"id":6,"img":"/img.jpg","tipoTreino":"Treino Pernas","data":"2022-01-05"},
+    {"id":7,"img":"/img.jpg","tipoTreino":"Treino Cardio","data":"2022-01-05"},
+    {"id":8,"img":"/img.jpg","tipoTreino":"Treino Costas","data":"2022-01-05"},
+    {"id":9,"img":"/img.jpg","tipoTreino":"Treino Pernas","data":"2022-01-05"}
+  ]    
+}

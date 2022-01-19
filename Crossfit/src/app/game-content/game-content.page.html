@@ -1,0 +1,104 @@
+<ion-header [translucent]="true" mode="md">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4"></ion-col>
+      <ion-col size="4" class="ion-align-self-center">
+        <img src="../../assets/icon/iconWhite.png" alt="">
+      </ion-col>
+      <ion-col size="1"></ion-col>
+      <ion-col size="3" class="ion-align-self-center" >
+        <ion-button size="large" mode="ios" >
+          <ion-icon name="menu-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content >
+
+  <div class="wodName ion-text-center">
+
+    <ion-text>
+      <h4 class="ion-no-margin">{{"WOD " + gameToPlay.wodName}}</h4>
+    </ion-text>
+    
+  </div>
+
+  <div class="timer">
+
+    <ion-grid>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="1">
+          <ion-icon name="stopwatch-outline"></ion-icon>
+        </ion-col>
+        <ion-col size="8">
+          <ion-text color="primary">
+            <h4 [chronometer]="gameTimer">00:50:23</h4>
+          </ion-text>
+        </ion-col>
+        <ion-col size="3">
+          <ion-text color="primary">
+            <h4>{{actualCard + "/" + numberOfCards }}</h4>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+  </div>
+
+  <div class="exercise">
+    <ion-text color="primary">
+      <h1>{{gameToPlay.cards[indexCard].exercise}}</h1>
+    </ion-text>
+  </div>
+
+  <!--<div class="deck">
+    <img src="../../assets/card/ACopas.jpg" alt="">
+  </div>
+
+  <app-card></app-card>-->
+  <swiper #swiper 
+    [effect]="'cards'" 
+    class="mySwiper"
+    [allowSlidePrev]="false"
+    (doubleClick)="log('double click')"
+    (slideChange)="next()"
+  >
+    <ng-template swiperSlide *ngFor="let item of gameToPlay.cards">
+      <img [src]="item.img" alt="">
+    </ng-template>
+  </swiper>
+  
+  <div class="timer2">
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="5" class="ion-text-right">
+          <ion-icon name="stopwatch-outline"></ion-icon>
+        </ion-col>
+        <ion-col size="7" class="ion-align-self-end">
+          <ion-text color="primary">
+            <h4 [chronometer]="cardTimer">50:23</h4>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+  </div>
+  
+  <div class="actionButton">
+    <ion-grid fixed class="ion-no-padding" class="ion-align-items-center">
+      <ion-row>
+        <ion-col size="12" >
+          <ion-button [disabled]="!arePlaying()" (click)="pause()" mode="ios" expand="full" fill="solid">
+            <ion-icon name="pause-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+  </div>
+  
+
+</ion-content>
