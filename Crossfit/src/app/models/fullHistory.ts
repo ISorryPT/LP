@@ -1,13 +1,16 @@
 export class FullHistory{
+    id: Number
     relWod:{
         wod:String;
         numCartas: String;
-        dataInicio:Date;
-        dataFim:Date;
-        duracao:Number;
+        dataInicio:String;
+        dataFim:String;
+        duracao:String;
     };
     relDetalhe:[{
+        id:Number
+        card: string
         exercicio: string;
-        duracao: Number;
+        duracao: String;
     }]
 }

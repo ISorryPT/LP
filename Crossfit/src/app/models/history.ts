@@ -4,5 +4,5 @@ export class History{
     id:Number;
     img:String;
     tipoTreino: String;
-    duracao:Time;
+    data: String;
 }

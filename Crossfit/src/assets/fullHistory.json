@@ -1,0 +1,20 @@
+
+{
+    "id":1234,
+    "relWod":{
+      "wod": "XPTO",
+      "numCartas": 50,
+      "dataInicio": "12/12/2021 12:34H",
+      "dataFim": "12/12/2021 14:34H",
+      "duracao": "01:34H"
+    },
+    "relDetalhe": [
+      {"id":1,"card":"ACopas.jpg","exercicio":"Pull UP > 00:20:40","duracao":"27464"}, 
+      {"id":2,"card":"ACopas.jpg","exercicio":"Push Press > 00:20:40","duracao":"27464"}, 
+      {"id":3,"card":"ACopas.jpg","exercicio":"Muscre UP > 00:40:40","duracao":"27464"}, 
+      {"id":4,"card":"ACopas.jpg","exercicio":"Pull UP > 00:20:40","duracao":"27464"}, 
+      {"id":5,"card":"ACopas.jpg","exercicio":"Pull UP > 00:20:40","duracao":"27464"}, 
+      {"id":6,"card":"ACopas.jpg","exercicio":"Pull UP > 00:20:40","duracao":"27464"}, 
+      {"id":7,"card":"ACopas.jpg","exercicio":"Pull UP > 00:20:40","duracao":"27464"}
+    ] 
+}

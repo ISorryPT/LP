@@ -4,7 +4,7 @@
     "cards": [
       {"id":1,"img":"../../assets/card/ACopas.jpg","reps":10,"exercise":"Pull UP 1"},
       {"id":2,"img":"../../assets/card/ACopas.jpg","reps":20,"exercise":"Pull UP 2"},
-      {"id":3,"img":"../../assets/card/ACopas.jpg","reps":30,"exercise":"Pull UP 3"},
+      {"id":3,"img":"../../assets/card/motion.gif","reps":30,"exercise":"Pull UP 3"},
       {"id":4,"img":"../../assets/card/ACopas.jpg","reps":40,"exercise":"Pull UP 4"},
       {"id":5,"img":"../../assets/card/ACopas.jpg","reps":50,"exercise":"Pull UP 5"},
       {"id":6,"img":"../../assets/card/ACopas.jpg","reps":60,"exercise":"Pull UP 6"},

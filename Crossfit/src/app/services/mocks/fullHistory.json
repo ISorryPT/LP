@@ -1,0 +1,20 @@
+
+{
+    "id":1234,
+    "relWod":{
+      "wod": "XPTO",
+      "numCartas": 50,
+      "dataInicio": "2022-01-18",
+      "dataFim": "2022-01-18",
+      "duracao": 1900000000
+    },
+    "relDetalhe": [
+      {"id":1,"card":"/img.jpg","exercicio":"Pull UP","duracao":27464}, 
+      {"id":2,"card":"/img.jpg","exercicio":"Pull UP","duracao":27464}, 
+      {"id":3,"card":"/img.jpg","exercicio":"Pull UP","duracao":27464}, 
+      {"id":4,"card":"/img.jpg","exercicio":"Pull UP","duracao":27464}, 
+      {"id":5,"card":"/img.jpg","exercicio":"Pull UP","duracao":27464}, 
+      {"id":6,"card":"/img.jpg","exercicio":"Pull UP","duracao":27464}, 
+      {"id":7,"card":"/img.jpg","exercicio":"Pull UP","duracao":27464}
+    ] 
+}

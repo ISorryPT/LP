@@ -24,7 +24,7 @@ export class HomePage implements OnInit{
   selectedMenu = "wod";
   selectedWood = 0;
   wods : Wod[] = [{"id":0,"name":"","numCards":0,"copas":"","paus":"","ouros":"","espadas":""}];
-  history : History[] = [{id:1,img:"",tipoTreino:"",duracao:{hours:1,minutes:30}}];
+  history : History[];
 
   constructor(private modalCtrl: ModalController, private API: APIService) {}
 

@@ -23,7 +23,7 @@ export class APIService {
   }
 
   getFullHistory(){
-    return this.http.get<FullHistory>('/assets/history.json')
+    return this.http.get<FullHistory>('/assets/fullHistory.json')
   }
 
   getGame(){

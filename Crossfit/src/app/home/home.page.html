@@ -105,11 +105,11 @@
     <ng-template swiperSlide>
 
       <div class="history">
-        <ion-list mode="md">
+        <ion-list mode="md" *ngIf="history">
 
           <ion-item *ngFor="let item of history" [routerLink]="['/end-game']">
             <ion-img src="../../assets/icon/iconWhite.png"></ion-img>
-            <ion-badge slot="end" color="primary" mode="ios">{{item.tipoTreino}} > 01:30</ion-badge>
+            <ion-badge slot="end" color="primary" mode="ios">{{item.tipoTreino}} > {{item.data}}</ion-badge>
           </ion-item>
         </ion-list>
 
