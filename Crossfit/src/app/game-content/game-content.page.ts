@@ -23,14 +23,18 @@ export class GameContentPage implements OnInit {
   //dados do jogo completo
   gameToPlay : Game = {
     wodName:"a",
-    cards:[{id:1,img:"",reps:0,exercise:""}
-  ]};
+    cards:[
+      {id:1,img:"",reps:0,exercise:""}
+    ]
+  };
 
-  //carta atual
-  actualCard = 0;
+  
 
   //Slide para countDown
   countDown = 5;
+  //carta atual
+  actualCard = 0;
+  indexCard = 0
 
   //Timer
   gameTimer: Chronometer = new Chronometer({
@@ -52,19 +56,20 @@ export class GameContentPage implements OnInit {
     this.API.getGame()
     .subscribe((res)=>{
       this.gameToPlay = res
-      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/blank.jpg",reps:0,exercise:"|1"})
-      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/blank.jpg",reps:0,exercise:"|2"})
-      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/blank.jpg",reps:0,exercise:"|3"})
-      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/blank.jpg",reps:0,exercise:"|4"})
-      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/blank.jpg",reps:0,exercise:"|5"})
+      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/go.png",reps:0,exercise:"Go"})
+      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/1.png",reps:0,exercise:"1"})
+      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/2.png",reps:0,exercise:"2"})
+      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/3.png",reps:0,exercise:"3"})
+      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/areYouReady.png",reps:0,exercise:"Ready"})
       this.showCountDown()
     })
   }
 
   next(){
-    if(this.actualCard < (this.gameToPlay.cards.length -5)){
+    if(this.actualCard < (this.gameToPlay.cards.length - 5)){
       this.cardTimer.restart()
       this.actualCard++;
+      this.indexCard++;
       this.swiper.swiperRef.slideNext()
     }
   }
@@ -74,6 +79,7 @@ export class GameContentPage implements OnInit {
     this.countDownTimer = setInterval(() => {
       if(this.countDown > 0) {
         this.countDown--;
+        this.indexCard++;
         this.swiper.swiperRef.slideNext()
       }else{
         this.startGame();
@@ -84,7 +90,8 @@ export class GameContentPage implements OnInit {
 
   //Iniciar o jogo
   startGame(){
-    this.actualCard=1;
+    this.actualCard = 1;
+    this.indexCard = 5
     this.gameTimer.start()
     this.cardTimer.start()
   }
@@ -93,8 +100,10 @@ export class GameContentPage implements OnInit {
   pause(){
     if(this.gameTimer.status == StatusChonometer.start){
       this.gameTimer.pause()
+      this.cardTimer.pause()
     }else{
       this.gameTimer.start()
+      this.cardTimer.start()
     }
   }
 
