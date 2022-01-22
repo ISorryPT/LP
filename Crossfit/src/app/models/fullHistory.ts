@@ -9,8 +9,8 @@ export class FullHistory{
     };
     relDetalhe:[{
         id:Number
-        card: string
-        exercicio: string;
+        card: String
+        exercicio: String;
         duracao: String;
     }]
 }
