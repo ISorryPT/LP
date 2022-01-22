@@ -1,9 +1,40 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
+<ion-header  mode="md" class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-button color="primary">
+        <ion-back-button  class="backButton"></ion-back-button>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <form id="#form" class="form">
 
+    <ion-item  class="inputIem" lines="none" >
+      <ion-label class="labelForm" position="stacked">Name</ion-label>
+      <ion-input class="inputForm" type="text" placeholder="name"></ion-input>
+    </ion-item>
+    
+    <ion-item  class="inputIem" lines="none" >
+      <ion-label class="labelForm" position="stacked">Email</ion-label>
+      <ion-input class="inputForm" type="email" placeholder="email"></ion-input>
+    </ion-item>
+
+    <ion-item  class="inputIem" lines="none" >
+      <ion-label class="labelForm" position="stacked">Password</ion-label>
+      <ion-input class="inputForm" type="password" ></ion-input>
+    </ion-item>
+
+    <div class="div_buttons">
+      <div class="div_button2">
+        <ion-button class="button_guest">Register</ion-button>
+      </div>
+    </div>
+
+    <div style="margin-top: 35px; color: white;">
+      <p style="text-align: center;">Have account? Click <a style="text-decoration: none; color: red;"[routerLink]="['/login']" >here</a> !</p>
+    </div>
+    
+  </form>
 </ion-content>
