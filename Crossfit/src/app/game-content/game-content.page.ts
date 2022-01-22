@@ -10,6 +10,7 @@ import { Game } from '../models/game';
 import { Chronometer, StatusChonometer } from 'ngx-chronometer';
 import { interval, Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { FullHistory } from '../models/fullHistory';
 
 // install Swiper modules
 SwiperCore.use([EffectCards]);
@@ -18,7 +19,7 @@ SwiperCore.use([EffectCards]);
 enum StatusTypes {
   STOPPED = "STOPPED",
   READY = "READY",
-  PLAYING = "DOPLAYINGN",
+  PLAYING = "PLAYING",
   COUNTINGDOWN = "COUNTINGDOWN",
   PAUSED = "PAUSED",
 }
@@ -42,8 +43,20 @@ export class GameContentPage implements OnInit, OnDestroy{
     ]
   };
 
-  
+  //dados do jogo completo
+  gameStats: FullHistory ={
+    id: undefined,
+    relWod: {
+      wod: undefined,
+      numCartas: undefined,
+      dataInicio: undefined,
+      dataFim: undefined,
+      duracao: undefined
+    },
+    relDetalhe: [{id:undefined,card:undefined, exercicio:undefined, duracao:undefined}]
+  }
 
+  
   //Slide para countDown
   countDown = 4;
   //carta atual
@@ -94,6 +107,12 @@ export class GameContentPage implements OnInit, OnDestroy{
       case StatusTypes.PLAYING:
         this.cardTimer.restart();
         if(this.actualCard < this.numberOfCards){
+          this.gameStats.relDetalhe.push({
+            id:this.actualCard,
+            card:this.gameToPlay.cards[this.indexCard].img,
+            exercicio:this.gameToPlay.cards[this.indexCard].exercise,
+            duracao: this.cardTimer.time.toString()
+          })
           this.actualCard++
         }else{
           this.stopGame();
@@ -130,15 +149,18 @@ export class GameContentPage implements OnInit, OnDestroy{
 
   //Iniciar o jogo
   startGame(){
+      this.gameStats.relWod.dataInicio = Date().toString()
       this.gameTimer.start();
       this.cardTimer.start();
       this.actualCard = 1;
       this.indexCard = 5;
   }
   stopGame(){
+    this.gameStats.relWod.dataFim = Date().toString()
     this.gameTimer.stop();
     this.cardTimer.stop();
     this.status = StatusTypes.STOPPED;
+    console.log("STATS: ", this.gameStats)
     this.router.navigate(['end-game'])
 }
 
