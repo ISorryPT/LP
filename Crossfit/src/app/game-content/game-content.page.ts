@@ -82,12 +82,12 @@ export class GameContentPage implements OnInit, OnDestroy{
       this.gameToPlay = res
       this.numberOfCards = res.cards.length
       //Adicionar cartas CountDown
-      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/go.png",reps:0,exercise:"Go"})
-      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/1.png",reps:0,exercise:"1"})
-      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/2.png",reps:0,exercise:"2"})
-      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/3.png",reps:0,exercise:"3"})
-      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/areYouReady.png",reps:0,exercise:"Ready"})
-      this.gameToPlay.cards.push({id:-1,img:"../../assets/card/areYouReady.png",reps:0,exercise:"Done!"})
+      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/go.png",reps:undefined,exercise:""})
+      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/1.png",reps:undefined,exercise:""})
+      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/2.png",reps:undefined,exercise:""})
+      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/3.png",reps:undefined,exercise:""})
+      this.gameToPlay.cards.unshift({id:-1,img:"../../assets/card/areYouReady.png",reps:undefined,exercise:""})
+      this.gameToPlay.cards.push({id:-1,img:"../../assets/card/blank.png",reps:undefined,exercise:""})
       this.status = StatusTypes.READY
     })
   }

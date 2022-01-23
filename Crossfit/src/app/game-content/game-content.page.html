@@ -49,15 +49,10 @@
 
   <div class="exercise">
     <ion-text color="primary">
-      <h1>{{gameToPlay.cards[indexCard].exercise}}</h1>
+      <h1 style="min-height: 30px;"> {{gameToPlay.cards[indexCard].reps}} X {{gameToPlay.cards[indexCard].exercise}}</h1>
     </ion-text>
   </div>
 
-  <!--<div class="deck">
-    <img src="../../assets/card/ACopas.jpg" alt="">
-  </div>
-
-  <app-card></app-card>-->
   <swiper #swiper 
     [effect]="'cards'" 
     class="mySwiper"

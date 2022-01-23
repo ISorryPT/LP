@@ -30,7 +30,11 @@ const routes: Routes = [
   {
     path: 'end-game',
     loadChildren: () => import('./end-game/end-game.module').then( m => m.EndGamePageModule)
+  },  {
+    path: 'forgot-password',
+    loadChildren: () => import('./forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
   },
+
 
 
 
